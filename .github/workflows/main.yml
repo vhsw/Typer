@@ -22,13 +22,12 @@ jobs:
     - name: Install the package
       run: |
         poetry install --no-interaction --no-root --no-dev
-        poetry shell
     - name: Install PyInstaller
       run: |
-        pip install pyinstaller
+        poetry run pip install pyinstaller
     - name: Run PyInstaller
       run: |
-        python -m PyInstaller src\typer.py -F --clean -w
+        poetry run python -m PyInstaller src\typer.py -F --clean -w
     - name: See dist directory
       run: ls dist
     - uses: actions/upload-artifact@v2
