@@ -1,6 +1,6 @@
 # Typer
 
-![build badge](https://github.com/vhsw/Typer/actions/workflows/main.yml/badge.svg)
+![build badge](https://github.com/vhsw/Typer/actions/workflows/main.yml/badge.svg) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/vhsw/typer)
 
 Simple tool to transfer text if you don't have accsess to the clipboard. For example, if you have to enter your 60 character steam password every time you start a Geforce Now session, this is the tool for you
 
