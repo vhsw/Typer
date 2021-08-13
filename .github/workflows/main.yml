@@ -9,18 +9,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
     - name: Python Poetry Action
       uses: abatilo/actions-poetry@v2.1.0
     - name: Print Versions
       run: |
         python --version
         pip --version
-    - name: Install requirements
+        poetry --version
+    - name: Install the package
+      run: |
+        poetry install --no-interaction --no-root
+    - name: Install PyInstaller
       run: |
         pip install pyinstaller
     - name: Run PyInstaller
       run: |
-        python -m PyInstaller src/typer.spec
+        python -m PyInstaller src\typer.py -F --clean -w
     - name: See dist directory
       run: ls dist
     - uses: actions/upload-artifact@v2
