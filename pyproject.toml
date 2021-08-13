@@ -1,15 +1,19 @@
 [tool.poetry]
 name = "typer"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Simple tool to transfer text if you don't have accsess to the clipboard"
+authors = ["Alexey Dubrov <nevermind1025@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 PyDirectInput = "^1.0.4"
+pyinstaller = { version = "^4.5.1", optional = true }
 
 [tool.poetry.dev-dependencies]
 black = "^21.5b2"
+
+[tool.poetry.extras]
+pyinstaller = ["pyinstaller"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
