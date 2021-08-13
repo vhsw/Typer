@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['src\\typer.py'],
+a = Analysis(['typer.py'],
              pathex=['C:\\Users\\vhsw\\Documents\\Typer'],
              binaries=[],
              datas=[],

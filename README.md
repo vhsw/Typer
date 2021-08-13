@@ -15,5 +15,5 @@ poetry install
 ## Usage
 
 ```console
-python typer.py
+python src/typer.py
 ```
