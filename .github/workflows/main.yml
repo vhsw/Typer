@@ -21,7 +21,7 @@ jobs:
         pip install pyinstaller
     - name: Run PyInstaller
       run: |
-        python -m PyInstaller power-profiler.spec
+        python -m PyInstaller src\typer.spec
     - name: See dist directory
       run: ls dist
     - uses: actions/upload-artifact@v2
