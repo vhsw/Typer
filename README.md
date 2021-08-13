@@ -4,7 +4,7 @@ Simple tool to transfer text if you don't have accsess to the clipboard. For exa
 
 ![screenshot](docs/screenshot.png)
 
-Use [prebuilt binary](/vhsw/Typer/releases/latest/download/typer.exe) or install python package
+To use this app download the [prebuilt binary](https://github.com/vhsw/Typer/releases/latest/download/typer.exe) and run it, no installation neded or install python package
 
 ## Installation
 
