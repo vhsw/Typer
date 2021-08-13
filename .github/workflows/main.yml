@@ -18,5 +18,5 @@ jobs:
         path: src
     - uses: actions/upload-artifact@v2
       with:
-        name: my-exe
-        path: src/dist/windows # or path/to/artifact
+        name: typer.exe
+        path: src/dist/windows
