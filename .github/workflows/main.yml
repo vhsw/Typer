@@ -15,7 +15,11 @@ jobs:
       run: |
         python --version
         pip --version
-    - name: Install requirements
+        pip --version
+    - name: Install the package
+      run: |
+        poetry install --no-interaction --no-root
+    - name: Install PyInstaller
       run: |
         pip install pyinstaller
     - name: Run PyInstaller
