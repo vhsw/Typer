@@ -15,8 +15,8 @@ jobs:
     - name: PyInstaller Windows
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
-        path: src
+        path: .
     - uses: actions/upload-artifact@v2
       with:
-        name: my-exe
-        path: src/dist/windows # or path/to/artifact
+        name: typer.exe
+        path: ./dist/windows
