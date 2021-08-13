@@ -27,7 +27,7 @@ jobs:
         pip install pyinstaller
     - name: Run PyInstaller
       run: |
-        python -m PyInstaller src/typer.spec
+        python -m PyInstaller src\typer.py -F --clean -w
     - name: See dist directory
       run: ls dist
     - uses: actions/upload-artifact@v2
