@@ -1,22 +1,30 @@
-name: Package exe with PyInstaller - Windows
+name: Build exe
 
 on:
   workflow_dispatch
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Python Poetry Action
       uses: abatilo/actions-poetry@v2.1.0
-    - name: PyInstaller Windows
-      uses: JackMcKew/pyinstaller-action-windows@main
-      with:
-        path: src
+    - name: Print Versions
+      run: |
+        python --version
+        pip --version
+    - name: Install requirements
+      run: |
+        pip install pyinstaller
+    - name: Run PyInstaller
+      run: |
+        python -m PyInstaller src/typer.spec
+    - name: See dist directory
+      run: ls dist
     - uses: actions/upload-artifact@v2
       with:
-        name: typer.exe
-        path: src/dist/windows
+        name: Windows
+        path: dist/typer.exe
+
