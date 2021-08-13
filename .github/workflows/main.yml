@@ -22,6 +22,7 @@ jobs:
     - name: Install the package
       run: |
         poetry install --no-interaction --no-root --no-dev
+        poetry shell
     - name: Install PyInstaller
       run: |
         pip install pyinstaller
