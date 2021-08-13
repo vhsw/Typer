@@ -1,0 +1,22 @@
+name: Package exe with PyInstaller - Windows
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Python Poetry Action
+      uses: abatilo/actions-poetry@v2.1.0
+    - name: PyInstaller Windows
+      uses: JackMcKew/pyinstaller-action-windows@main
+      with:
+        path: src
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-exe
+        path: src/dist/windows # or path/to/artifact
